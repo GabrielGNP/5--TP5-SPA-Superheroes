@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img id="logoDC" src="imgs/DC_Comics_logo.png" alt="" width="100px" check>
+        <img id="logoMarvel" src="imgs/Marvel2.png" alt="" width="140px" check>
+    </nav>
+    <main id="containerChards">
+        <section class="chard DC" id="CDC1">
+            <button class="deleteChard" onclick="deleteChard('CDC1')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard Marvel" id="CMarvel1">
+            <button class="deleteChard" onclick="deleteChard('CMarvel1')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard Marvel" id="CMarvel2">
+            <button class="deleteChard" onclick="deleteChard('CMarvel2')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard DC" id="CDC2">
+            <button class="deleteChard" onclick="deleteChard('CDC2')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard Marvel" id="CMarvel3">
+            <button class="deleteChard" onclick="deleteChard('CMarvel3')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard DC" id="CDC3">
+            <button class="deleteChard" onclick="deleteChard('CDC3')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard DC" id="CDC4">
+            <button class="deleteChard" onclick="deleteChard('CDC1')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard Marvel" id="CMarvel4">
+            <button class="deleteChard" onclick="deleteChard('CMarvel1')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard Marvel" id="CMarvel5">
+            <button class="deleteChard" onclick="deleteChard('CMarvel2')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard DC" id="CDC5">
+            <button class="deleteChard" onclick="deleteChard('CDC2')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard Marvel" id="CMarvel6">
+            <button class="deleteChard" onclick="deleteChard('CMarvel3')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+        <section class="chard DC" id="CDC6">
+            <button class="deleteChard" onclick="deleteChard('CDC3')">X</button>
+            <article>
+                
+            </article>
+            <div class="containerShowInfo">
+                <button class="showInfo">Ver</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+<script>
+    document.getElementById("logoMarvel").addEventListener("click", function(){
+        let logo = document.getElementById("logoMarvel");
+        if(logo.hasAttribute("check")){
+            document.getElementById("logoMarvel").removeAttribute("check");
+            document.querySelectorAll(".Marvel").forEach((chard) => {
+                chard.classList.add("hiden");
+            })
+        }
+        else {
+            document.getElementById("logoMarvel").setAttribute("check","");
+            document.querySelectorAll(".Marvel").forEach((chard) => {
+                chard.classList.remove("hiden");
+            })
+        }
+
+    })
+    document.getElementById("logoDC").addEventListener("click", function(){
+        let logo = document.getElementById("logoDC");
+        if(logo.hasAttribute("check"))
+        {
+            document.getElementById("logoDC").removeAttribute("check");
+            document.querySelectorAll(".DC").forEach((chard) => {
+                chard.classList.add("hiden");
+            })
+        }
+        else {
+            document.getElementById("logoDC").setAttribute("check","");
+            document.querySelectorAll(".DC").forEach((chard) => {
+                chard.classList.remove("hiden");
+            })
+        }
+    })
+
+    function deleteChard(id){
+        console.log("elimina " + id)
+        document.getElementById(id).remove();
+    }
+</script>
