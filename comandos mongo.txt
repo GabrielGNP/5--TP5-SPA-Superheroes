@@ -1,0 +1,11 @@
+>show dbs
+db: dbHeroe
+
+> use dbHeroe
+
+> db.getCollectionNames()
+collection: heroes
+
+> db.heroes.insertOne({...})
+
+> db.heroes.find({})

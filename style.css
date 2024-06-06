@@ -50,6 +50,22 @@ nav img:hover:not([check]){
     filter:brightness(0.6) grayscale(0.4) !important;
 }
 
+.containerSearch{
+    display: flex;
+    justify-content: center;
+}
+
+.search{
+    background: rgb(25, 25, 25);
+    border: 0px;
+    border-radius: 5px;
+    width: 300px;
+    height: 25px;
+    border: 1px solid rgb(63, 63, 63);
+    outline: 0px;
+    padding: 5px;
+    text-align: end;
+}
 
 main{
     /*border: 1px solid rgb(86, 86, 86);*/
@@ -57,7 +73,8 @@ main{
     width: 90vw;
     margin-top: 100px;
     margin-left: 5vw;
-    height:400px;
+    margin-bottom: 5vh;
+    /*height:400px;*/
     display: flex;
     
     flex-direction: row;
@@ -67,16 +84,32 @@ main{
     /*overflow-y:scroll;   */
 }
 
-.chard{
+#containerCards{
+    color: grey;
+    font-size: 25px;
+    font-family: fantasy;
+}
+
+.ContCard{
     margin: 15px;
     margin-top: 20px;
-    padding: 0px;
+    padding: 20px;
     width: 200px;
     height: 300px;
     border-radius: 10px;
     position: relative;
+    transition: 1s;
 }
-.chard.DC{
+.card{
+    width: 200px;
+    height: 300px;
+    position: relative;
+}
+.ContCard:hover{
+    padding: 0px;
+}
+
+.card.DC{
     border-radius: 10px;
     border: 2px solid rgba(0, 123, 255, 0.321);
     background: linear-gradient(45deg, rgba(0, 43, 90, 0.125)45%, rgba(0, 123, 255, 0.125) 75%, rgba(0, 43, 90, 0.125) 90%);
@@ -84,12 +117,15 @@ main{
     background-size: 100% 100%;
     background-position: 0% 0%;
 }
-.chard.DC:hover{
+.card.DC:hover{
     border: 2px solid rgb(0, 123, 255);
     background-size: 300% 300%;
     background-position: 100% 0%;
+    width: 230px;
+    height: 330px;
+    box-shadow: 10px 15px 10px 0 rgba(0, 0, 0, 0.3);
 }
-.chard.Marvel{
+.card.Marvel{
     border-radius: 10px;
     border: 2px solid rgba(255, 0, 0, 0.321);
     background: linear-gradient(45deg, rgba(80, 0, 0, 0.155)45%, rgba(255, 0, 0, 0.155) 75%,rgba(80, 0, 0, 0.155) 90%);
@@ -97,16 +133,19 @@ main{
     background-size: 100% 100%;
     background-position: 0% 0%;
 }
-.chard.Marvel:hover{
+.card.Marvel:hover{
     border: 2px solid rgb(255, 0, 0);
     background-size: 300% 300%;
     background-position: 100% 0%;
+    width: 230px;
+    height: 330px;
+    box-shadow: 10px 15px 10px 0 rgba(0, 0, 0, 0.3);
 }
-.chard.hiden{
+.ContCard.hiden{
     display: none;
 }
 
-.chard .deleteChard{
+.card .deleteCard{
     background: none;
     border: 0px;
     position: absolute;
@@ -120,34 +159,34 @@ main{
     opacity: 0;
     transition: 0.5s;
 }
-.chard:hover .deleteChard{
+.card:hover .deleteCard{
     opacity: 1;
 }
-.chard.DC .deleteChard{
+.card.DC .deleteCard{
     background:rgba(2, 39, 78, 0.33);
     box-shadow: 
         inset 0px 0px 6px 1px rgb(0, 123, 255)
     ;
     color: rgb(116, 183, 255);
 }
-.chard.Marvel .deleteChard{
+.card.Marvel .deleteCard{
     background:rgba(86, 0, 0, 0.33);
     box-shadow: 
         inset 0px 0px 6px 1px rgb(255, 0, 0)
     ;
     color: rgb(255, 131, 131);
 }
-.chard .deleteChard:hover{
+.card .deleteCard:hover{
     transform: rotate(0.5turn);
     font-size: 25px;
 }
-.chard.DC .deleteChard:hover{
+.card.DC .deleteCard:hover{
     box-shadow: 
         inset 0px 0px 2px 1px rgb(0, 123, 255),
         0px 0px 10px 1px rgb(0, 123, 255)
     ;
 }
-.chard.Marvel .deleteChard:hover{
+.card.Marvel .deleteCard:hover{
     box-shadow: 
         inset 0px 0px 2px 1px rgb(255, 0, 0),
         0px 0px 10px 1px rgb(255, 0, 0);
@@ -155,23 +194,103 @@ main{
 }
 
 
-.chard article{
-    height: 50%;
+.card .titleCard{
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    left: calc(50% - 100px);
+    margin: 0px;
+    font-size: 20px;
+}
+
+.card.DC .titleCard{
+    color:rgb(88, 151, 219);
+    text-shadow: 0px 0px 10px rgb(9, 85, 138);
+}
+.card.Marvel .titleCard{
+    color:rgb(230, 125, 125);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+
+.card .imgContainer{
+    height: 40%;
     width: 70%;
     position: absolute;
     left: 15%;
-    top: 5%;
+    top: 8%;
 }
-.chard.DC article{
+.card.DC .imgContainer{
     border: 1px solid rgb(0, 123, 255);
     background: rgba(0, 42, 87, 0.412);
 }
-.chard.Marvel article{
+.card.Marvel .imgContainer{
     border: 1px solid rgb(255, 0, 0);
     background: rgba(125, 0, 0, 0.286)
 }
+.card .namePJ{
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    bottom: 40%;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+}
+.card.DC .namePJ{
+    color:rgb(88, 151, 219);
+    text-shadow: 0px 0px 10px rgb(9, 85, 138);
+}
+.card.Marvel .namePJ{
+    color:rgb(230, 125, 125);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
 
-.chard .containerShowInfo{
+.card .infoContainer{
+    width: 90%;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    bottom: 10%;
+    height: 30%;
+    left: 5%;
+    font-size: 12px;
+    transition: 1s;
+}
+.card.DC .infoContainer{
+    border: 1px solid rgba(0, 71, 147, 0.412);
+}
+.card.Marvel .infoContainer{
+    border: 1px solid rgba(159, 0, 0, 0.286);
+    color:rgb(240, 209, 209);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+.card:hover .infoContainer{
+    line-height: 1.5em;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.card .infoContainer p{
+    margin: 0px;
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.4em;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card.DC .infoContainer p{
+    color:rgb(180, 208, 239);
+    text-shadow: 0px 0px 10px rgb(9, 85, 138);
+}
+.card.Marvel .infoContainer p{
+    color:rgb(240, 209, 209);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+
+.card .containerShowInfo{
     overflow: hidden;
     position: absolute;
     bottom: 0px;
@@ -179,7 +298,7 @@ main{
     height: 50px;
     background: transparent;
 }
-.chard .showInfo{
+.card .showInfo{
     position: absolute;
     bottom: -30px;
     width: 50%;
@@ -198,7 +317,7 @@ main{
     border-radius: 10px;
     font-size: 16px;
 }
-.chard.DC:hover .showInfo{
+.card.DC:hover .showInfo{
     bottom: 10px;
     box-shadow: 
         0px 0px 5px 0px rgb(0, 123, 255),
@@ -207,7 +326,7 @@ main{
     color: rgb(116, 183, 255);
     text-shadow: 0px 0px 2px rgb(0, 123, 255);
 }
-.chard.Marvel:hover .showInfo{
+.card.Marvel:hover .showInfo{
     bottom: 10px;
     box-shadow: 
         0px 0px 5px 0px rgb(255, 0, 0),
@@ -215,4 +334,325 @@ main{
     ;
     color: rgb(255, 131, 131);
     text-shadow: 0px 0px 2px rgb(255, 0, 0);
+}
+
+
+.dialogInfo{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    background: #00000085;
+    margin: 0px;
+    border: 0px;
+}
+
+.dialogInfo .buttonDelete{
+    background-color: transparent;
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 2%;
+}
+.dialogInfo .buttonDelete:nth-child(1){
+    top: 5%;
+    font-size: 25px;
+}
+.dialogInfo .buttonDelete:nth-child(2){
+    top: 15%;
+}
+.dialogInfo .buttonDelete:nth-child(3){
+    top: 25%;
+}
+.dialogInfo .buttonDelete.DC{
+    background: rgba(0, 34, 71, 0.445);
+    box-shadow: 
+        0px 0px 5px 0px rgb(0, 123, 255),
+        inset 0px 0px 5px 0px rgb(0, 123, 255)
+    ;
+    color: rgb(116, 183, 255);
+    text-shadow: 0px 0px 2px rgb(0, 123, 255);
+}
+.dialogInfo .buttonDelete.DC:hover{
+    background: rgba(0, 49, 102, 0.689);
+    box-shadow: 
+        0px 0px 10px 0px rgb(0, 123, 255),
+        inset 0px 0px 10px 0px rgb(0, 123, 255)
+    ;
+}
+.dialogInfo .buttonDelete.DC.Del:hover{
+    background: rgba(0, 49, 102, 0.689);
+    box-shadow: 
+        0px 0px 10px 0px rgb(255, 136, 0),
+        inset 0px 0px 10px 0px rgb(255, 136, 0)
+    ;
+}
+.dialogInfo .buttonDelete.DC svg{
+    color: rgb(116, 183, 255);
+    text-shadow: 0px 0px 2px rgb(0, 123, 255);
+    height: 30px; 
+    width: 30px;
+}
+
+.dialogInfo .buttonDelete.Marvel{
+    background: rgba(59, 0, 0, 0.447);
+    box-shadow: 
+        0px 0px 5px 0px rgb(255, 0, 0),
+        inset 0px 0px 5px 0px rgb(255, 0, 0);
+    ;
+    color: rgb(255, 131, 131);
+    text-shadow: 0px 0px 2px rgb(255, 0, 0);
+}
+.dialogInfo .buttonDelete.Marvel:hover{
+    background: rgba(100, 0, 0, 0.651);
+    box-shadow: 
+        0px 0px 10px 0px rgb(255, 0, 0),
+        inset 0px 0px 10px 0px rgb(255, 0, 0);
+    ;
+}
+.dialogInfo .buttonDelete.Marvel.Del:hover{
+    background: rgba(100, 0, 0, 0.651);
+    box-shadow: 
+        0px 0px 10px 0px rgb(255, 136, 0),
+        inset 0px 0px 10px 0px rgb(255, 136, 0)
+    ;
+}
+.dialogInfo .buttonDelete.Marvel svg{
+    color: rgb(255, 131, 131);
+    text-shadow: 0px 0px 2px rgb(255, 0, 0);
+    height: 30px; 
+    width: 30px;
+}
+
+.dialogCard {
+    width: 50%;
+    max-width: 500px;
+    /* min-width: 350px; */
+    height: 100%;
+    position: relative;
+    left: calc(50% - 250px);
+}
+.dialogCard #logoDialog{
+    position: absolute;
+    rotate: 330deg;
+}
+.dialogCard .logoDCDialog{
+    left: -75px;
+    top: -25px;
+    filter: brightness(1) grayscale(0) drop-shadow(0 0 10px rgba(38, 65, 121, 0.8));
+    background: rgba(0, 0, 0, 0.651);
+    border-radius: 100%;
+    width: 140px;
+}
+.dialogCard .logoMarvelDialog{
+    left: -70px;
+    top: -5px;
+    filter: brightness(1) grayscale(0) drop-shadow(0 0 10px rgba(121, 38, 38, 0.8));
+    background: rgba(0, 0, 0, 0.651);
+    border-radius: 20%;
+    width: 170px;
+}
+
+.dialogCard.DC{
+    border-radius: 10px;
+    border: 2px solid rgba(0, 36, 74, 0.321);
+    background: linear-gradient(45deg, rgb(7, 37, 69)45%, rgb(6, 51, 99) 75%, rgb(7, 37, 69) 90%);
+ 
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    box-shadow: 0px 0px 10px 5px rgb(0 123 255);
+}
+.dialogCard.Marvel{
+    border-radius: 10px;
+    border: 2px solid rgba(69, 0, 0, 0.329);
+    background: linear-gradient(45deg, rgb(80, 0, 0)45%, rgb(143, 0, 0) 75%,rgb(80, 0, 0) 90%);
+
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    box-shadow: 0px 0px 10px 5px rgb(255, 87, 87);
+}
+.dialogCard .titleCard{
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    left: calc(50% - 100px);
+    margin: 0px;
+    font-size: 30px;
+}
+.dialogCard.DC .titleCard{
+    color:rgb(88, 151, 219);
+    text-shadow: 0px 0px 10px rgb(9, 85, 138);
+}
+.dialogCard.Marvel .titleCard{
+    color:rgb(230, 125, 125);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+
+.dialogCard .imgContainer{
+    min-height: 250px;
+    height: 35%;
+    max-height: 300px;
+    width: 250px;
+    position: absolute;
+    left: calc(50% - 125px);
+    top: 8%;
+}
+.dialogCard.DC .imgContainer{
+    border: 1px solid rgb(0, 123, 255);
+    background: rgba(0, 16, 33, 0.334);
+}
+.dialogCard.Marvel .imgContainer{
+    border: 1px solid rgb(255, 0, 0);
+    background: rgba(46, 0, 0, 0.333)
+}
+
+.dialogCard article{
+    position: absolute;
+    bottom: 0px;
+    width: 90%;
+    left: 5%;
+    height: 50%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.dialogCard.DC article p,
+.dialogCard.DC article span{
+    margin-bottom: 0px;
+    color:rgb(88, 151, 219);
+    text-shadow: 0px 0px 10px rgb(9, 85, 138);
+}
+.dialogCard.Marvel article p,
+.dialogCard.Marvel article span{
+    margin-bottom: 0px;
+    color:rgb(230, 125, 125);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+
+.dialogCard article .simpleData{
+    display: grid;
+    justify-items: start;
+}
+.dialogCard article .bioContainer{
+    padding: 10px;
+    text-align: left;
+    text-wrap: wrap;
+    height: 45%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.dialogCard.DC article .bioContainer{
+    border: 1px solid rgb(0, 123, 255);
+    color:rgb(180, 208, 239);
+    text-shadow: 0px 0px 10px rgb(9, 85, 138);
+}
+.dialogCard.Marvel article .bioContainer{
+    border: 1px solid rgb(255, 0, 0);
+    color:rgb(240, 209, 209);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+
+.dialogCard.DC article .data{
+    color:rgb(180, 208, 239);
+    text-shadow: 0px 0px 10px rgb(9, 85, 138);
+}
+.dialogCard.Marvel article .data{
+    color:rgb(240, 209, 209);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+
+
+.dialogAlert{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    background: #000000ae;
+    margin: 0px;
+    border: 0px;
+}
+
+.dialogAlert section{
+    padding: 0px;
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 200px;
+    top: calc(50% - 100px);
+}
+
+.dialogAlert section.DC{
+    border: 2px solid rgba(0, 36, 74, 0.321);
+    background: linear-gradient(45deg, rgb(7, 37, 69)45%, rgb(6, 51, 99) 75%, rgb(7, 37, 69) 90%);
+}
+
+.dialogAlert section.Marvel{
+    border: 2px solid rgba(69, 0, 0, 0.329);
+    background: linear-gradient(45deg, rgb(80, 0, 0)45%, rgb(143, 0, 0) 75%,rgb(80, 0, 0) 90%);
+}
+
+.dialogAlert section h1{
+    text-align: center;
+    background-color:#0000003b;
+    margin: 0px;
+    padding: 5px;
+}
+.dialogAlert section.DC h1{
+    color:rgb(88, 151, 219);
+    text-shadow: 0px 0px 10px rgb(9, 85, 138);
+}
+.dialogAlert section.Marvel h1{
+    color:rgb(230, 125, 125);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+
+.dialogAlert section.DC article p{
+    text-align: center;
+    color:rgb(160, 206, 255);
+}
+.dialogAlert section.Marvel article p{
+    text-align: center;
+    color:rgb(255, 212, 212);
+}
+
+.dialogAlert article div{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+}
+.dialogAlert button{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #00000066;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.dialogAlert button:nth-child(1){
+    background-color: #0000005c;
+}
+.dialogAlert button:nth-child(2){
+    background-color: transparent;
+}
+
+.dialogAlert section.DC button:hover{
+    box-shadow: 0px 0px 5px 0px rgb(8, 75, 146),
+    inset 0px 0px 10px 0px rgb(8, 75, 146);
+    background: #00000030;
+}
+
+.dialogAlert section.Marvel button:hover{
+    box-shadow: 0px 0px 5px 0px rgb(172, 32, 32),
+    inset 0px 0px 10px 0px rgb(172, 32, 32);
+    background: #00000030;
 }

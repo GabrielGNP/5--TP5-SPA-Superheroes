@@ -11,155 +11,437 @@
         <img id="logoDC" src="imgs/DC_Comics_logo.png" alt="" width="100px" check>
         <img id="logoMarvel" src="imgs/Marvel2.png" alt="" width="140px" check>
     </nav>
-    <main id="containerChards">
-        <section class="chard DC" id="CDC1">
-            <button class="deleteChard" onclick="deleteChard('CDC1')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard Marvel" id="CMarvel1">
-            <button class="deleteChard" onclick="deleteChard('CMarvel1')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard Marvel" id="CMarvel2">
-            <button class="deleteChard" onclick="deleteChard('CMarvel2')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard DC" id="CDC2">
-            <button class="deleteChard" onclick="deleteChard('CDC2')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard Marvel" id="CMarvel3">
-            <button class="deleteChard" onclick="deleteChard('CMarvel3')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard DC" id="CDC3">
-            <button class="deleteChard" onclick="deleteChard('CDC3')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard DC" id="CDC4">
-            <button class="deleteChard" onclick="deleteChard('CDC1')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard Marvel" id="CMarvel4">
-            <button class="deleteChard" onclick="deleteChard('CMarvel1')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard Marvel" id="CMarvel5">
-            <button class="deleteChard" onclick="deleteChard('CMarvel2')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard DC" id="CDC5">
-            <button class="deleteChard" onclick="deleteChard('CDC2')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard Marvel" id="CMarvel6">
-            <button class="deleteChard" onclick="deleteChard('CMarvel3')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
-        <section class="chard DC" id="CDC6">
-            <button class="deleteChard" onclick="deleteChard('CDC3')">X</button>
-            <article>
-                
-            </article>
-            <div class="containerShowInfo">
-                <button class="showInfo">Ver</button>
-            </div>
-        </section>
+    <div class="containerSearch">
+        <input class="search" type="text" name="" id="searchInput">
+    </div>
+    <main id="containerCards">
+        <div class="ContCard" id="cardBatMan">
+            <section class="card DC" id="CDC1">
+                <button class="deleteCard" onclick="showAlert('CDC1')">X</button>
+                <p class="titleCard">BatMan</p>
+                <article class="imgContainer">
+                    
+                </article>
+                <div class="namePJ">nombrePJ</div>
+                <article class="infoContainer">
+                    <p>Nacido en el planeta Krypton como Kal-El, fue enviado a la Tierra antes de la destrucción de su planeta. Criado por una familia de granjeros en Kansas, Clark Kent desarrolló habilidades sobrehumanas y decidió usar sus poderes para proteger a la humanidad como Superman.</p>
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo" onclick="showDialogInfo('BatMan')">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="cardThor">
+            <section class="card Marvel" id="CMarvel1">
+                <button class="deleteCard" onclick="deleteCard('CMarvel1')">X</button>
+                <p class="titleCard">Thor</p>
+                <article class="imgContainer">
+                    
+                </article>
+                <div class="namePJ">nombrePJ</div>
+                <article class="infoContainer">
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="cardHulk">
+            <section class="card Marvel" id="CMarvel2">
+                <button class="deleteCard" onclick="deleteCard('CMarvel2')">X</button>
+                <p class="titleCard">Hulk</p>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="cardIronMan">
+            <section class="card Marvel" id="CMarvel2">
+                <button class="deleteCard" onclick="deleteCard('CDC2')">X</button>
+                <p class="titleCard">IronMan</p>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="card">
+            <section class="card Marvel" id="CMarvel3">
+                <button class="deleteCard" onclick="deleteCard('CMarvel3')">X</button>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="card">
+            <section class="card DC" id="CDC3">
+                <button class="deleteCard" onclick="deleteCard('CDC3')">X</button>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="card">
+            <section class="card DC" id="CDC4">
+                <button class="deleteCard" onclick="deleteCard('CDC4')">X</button>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="card">
+            <section class="card Marvel" id="CMarvel4">
+                <button class="deleteCard" onclick="deleteCard('CMarvel4')">X</button>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="card">
+            <section class="card Marvel" id="CMarvel5">
+                <button class="deleteCard" onclick="deleteCard('CMarvel5')">X</button>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="card">
+            <section class="card DC" id="CDC5">
+                <button class="deleteCard" onclick="deleteCard('CDC5')">X</button>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="card">
+            <section class="card Marvel" id="CMarvel6">
+                <button class="deleteCard" onclick="deleteCard('CMarvel6')">X</button>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
+        <div class="ContCard" id="card">
+            <section class="card DC" id="CDC6">
+                <button class="deleteCard" onclick="deleteCard('CDC6')">X</button>
+                <article>
+                    
+                </article>
+                <div class="containerShowInfo">
+                    <button class="showInfo">Ver</button>
+                </div>
+            </section>
+        </div>
     </main>
+    <dialog class="dialogInfo" id="dialogInfo">
+        <button class="buttonDelete DC" id="buttonCloseInfo" onclick="closeDialogInfo()">X</button>
+        <button class="buttonDelete DC" id="buttonEditInfo" onclick="">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="color: red;height: 30px; width: 30px;">
+                <path style="color: inherit;" fill="currentColor" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/>
+            </svg>
+        </button>
+        <button class="buttonDelete DC Del" id="buttonDeleteInfoDialog" onclick="showAlert('CDC1')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="color: red;height: 30px; width: 30px;">
+                <path style="color: inherit;" fill="currentColor" d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/>
+            </svg>
+        </button>
+        <section class="dialogCard DC" id="dialogCard">
+            <img class="logoMarvelDialog" id="logoDialog" src="imgs/Marvel2.png" alt="" >
+            <p class="titleCard" id="infoNombre">Nombre</p>
+            <div class="imgContainer">
+                
+            </div>
+            <article>
+                <div class="simpleData">
+                    <div><span>nombrePJ: </span><span class="data" id="infoNombrePJ"></span></div>
+                    <div><span>año de aparición: </span><span class="data" id="infoAño"></span></div>
+                    <div><span>casa: </span><span class="data" id="infoCasa"></span></div>
+                </div>
+                <p>equipamiento:</p><div class="data" id="infoEquipment"></div>
+                <p>biografía:</p>
+                <div class="bioContainer" id="infoBio"></div>
+            </article>
+        </section>
+    </dialog>
+
+    <dialog class="dialogAlert" id="dialogAlert">
+       <section class="DC">
+            <h1>Eliminación</h1>
+            <article>
+                <p>¿Está seguro que desea eliminar este personaje?</p>
+                <p>Si lo hace, no podrá recuperar la información y deberá volver a crearlo si desea recuperarlo.</p>
+                <div>
+                    <button onclick="deleteCard('CDC1')">SI</button>
+                    <button onclick="closeDialogAlert()">NO</button>
+                </div>
+
+            </article>
+       </section>
+    </dialog>
 </body>
 </html>
 
 <script>
+    function loadAllHeros(){
+        fetch(`http://localhost:5000/allHeroes`)
+        .then(response => response.text())
+        .then(htmlCards => {
+            //console.log(htmlCards);
+            document.getElementById("containerCards").innerHTML = htmlCards
+        }).then(data => {
+            searchHero();
+        })
+    }
+
+    function loadHerosMarvel(){
+        fetch(`http://localhost:5000/allHeroes/Marvel`)
+        .then(response => response.text())
+        .then(htmlCards => {
+            //console.log(htmlCards);
+            document.getElementById("containerCards").innerHTML = htmlCards
+        }).then(data => {
+            searchHero();
+        })
+    }
+    function loadHerosDC(){
+        fetch(`http://localhost:5000/allHeroes/DC`)
+        .then(response => response.text())
+        .then(htmlCards => {
+            //console.log(htmlCards);
+            document.getElementById("containerCards").innerHTML = htmlCards
+        }).then(data => {
+            searchHero();
+        })
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("searchInput").addEventListener("keyup", function(){
+            searchHero();
+        })
+        switchCards();
+    })
+   
     document.getElementById("logoMarvel").addEventListener("click", function(){
-        let logo = document.getElementById("logoMarvel");
+        let logo = document.getElementById("logoMarvel")
         if(logo.hasAttribute("check")){
             document.getElementById("logoMarvel").removeAttribute("check");
-            document.querySelectorAll(".Marvel").forEach((chard) => {
-                chard.classList.add("hiden");
-            })
+            // ocultar las targetas de Marvel desde front
+            // document.getElementById("containerCards").querySelectorAll(":scope > div").forEach((card) => {
+            //     console.log(card)
+            //     let viewCard = card.querySelector("section");
+            //     if(viewCard.classList.contains("Marvel")){
+            //         card.classList.add("hiden");
+            //     }
+            // })
         }
         else {
             document.getElementById("logoMarvel").setAttribute("check","");
-            document.querySelectorAll(".Marvel").forEach((chard) => {
-                chard.classList.remove("hiden");
-            })
+            //mostrar las targetas de Marvel desde front
+            // document.getElementById("containerCards").querySelectorAll(":scope > div").forEach((card) => {
+            //     console.log(card)
+            //     let viewCard = card.querySelector("section");
+            //     if(viewCard.classList.contains("Marvel")){
+            //         card.classList.remove("hiden");
+            //     }
+            // })
         }
-
+        switchCards();
+        searchHero();
     })
     document.getElementById("logoDC").addEventListener("click", function(){
         let logo = document.getElementById("logoDC");
         if(logo.hasAttribute("check"))
         {
             document.getElementById("logoDC").removeAttribute("check");
-            document.querySelectorAll(".DC").forEach((chard) => {
-                chard.classList.add("hiden");
-            })
+            //esconder las targetas de Marvel desde front
+            // document.getElementById("containerCards").querySelectorAll(":scope > div").forEach((card) => {
+            //     console.log(card)
+            //     let viewCard = card.querySelector("section");
+            //     if(viewCard.classList.contains("DC")){
+            //         card.classList.add("hiden");
+            //     }
+            // })
         }
         else {
             document.getElementById("logoDC").setAttribute("check","");
-            document.querySelectorAll(".DC").forEach((chard) => {
-                chard.classList.remove("hiden");
-            })
+            //mostrar las targetas de Marvel desde front
+            // document.getElementById("containerCards").querySelectorAll(":scope > div").forEach((card) => {
+            //     console.log(card)
+            //     let viewCard = card.querySelector("section");
+            //     if(viewCard.classList.contains("DC")){
+            //         card.classList.remove("hiden");
+            //     }
+            // })
         }
+        switchCards();
+        
     })
 
-    function deleteChard(id){
-        console.log("elimina " + id)
-        document.getElementById(id).remove();
+    function switchCards(){
+        let logoMarvel = document.getElementById("logoMarvel").hasAttribute("check");
+        let logoDC = document.getElementById("logoDC").hasAttribute("check");
+        switch (`${logoMarvel}-${logoDC}`) {
+        case 'true-true':
+            
+            loadAllHeros();
+            break;
+        case 'true-false':
+            loadHerosMarvel();
+            break;
+        case 'false-true':
+            loadHerosDC();
+            break;
+        case 'false-false':
+            document.getElementById("containerCards").innerHTML = "Sin casa seleccionada"
+            break;
+        default:
+            loadAllHeros();
+        }
     }
+    
+    function searchHero(){
+        let name = document.getElementById("searchInput").value.toLowerCase();
+        console.log(name)
+        let mainCards = document.getElementById("containerCards");
+        if(name != null && name != ""){
+            mainCards.querySelectorAll(":scope > div").forEach((cardContainer) =>{
+                if(cardContainer.id.toLowerCase().includes("card")){
+                    if(cardContainer.id.toLowerCase().replace("card","").includes(name)){
+                        //console.log(cardContainer.id.toLowerCase(), "block")                            if(!cardContainer.classList.contains("hiden"))
+                        cardContainer.style.display = "";    
+                    }else{
+                        //console.log(cardContainer.id.toLowerCase(), "none")
+                        cardContainer.style.display = "none";
+                    }
+                }
+            })
+        }else{
+            //console.log("borra")
+            mainCards.querySelectorAll("div").forEach((cardContainer) =>{
+                if(!cardContainer.classList.contains("hiden"))
+                    cardContainer.style.display = "";
+            })
+        }
+    }
+
+    function showAlert(id){
+        let dialogAlert;
+        if(id.includes("Marvel")){
+            dialogAlert = "<section class='Marvel'>"
+        }else if(id.includes("DC")){
+            dialogAlert = "<section class='DC'>"
+        }
+        dialogAlert = dialogAlert 
+        +    "<h1>Eliminación</h1>"
+        +    "<article>"
+        +        "<p>¿Está seguro que desea eliminar este personaje?</p>"
+        +        "<p>Si lo hace, no podrá recuperar la información y deberá volver a crearlo si desea recuperarlo.</p>"
+        +        "<div>"
+        +            `<button onclick='deleteCard("${id}")'>SI</button>`
+        +            "<button onclick='closeDialogAlert()'>NO</button>"
+        +        "</div>"
+        +    "</article>"
+        +"</section>";
+        document.getElementById("dialogAlert").innerHTML=dialogAlert;
+        document.getElementById("dialogAlert").showModal();
+    }
+    
+    function closeDialogAlert(){
+        document.getElementById("dialogAlert").close();
+    }
+
+    function showDialogInfo(nameHero, idCard){
+
+        fetch(`http://localhost:5000/heroData/${nameHero}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            
+            if(data.casa=="Marvel"){
+                document.getElementById("buttonCloseInfo").classList.replace("DC", "Marvel");
+                document.getElementById("buttonEditInfo").classList.replace("DC", "Marvel");
+                document.getElementById("buttonDeleteInfoDialog").classList.replace("DC", "Marvel");
+                document.getElementById("dialogCard").classList.replace("DC", "Marvel");
+            }else{
+                document.getElementById("buttonCloseInfo").classList.replace("Marvel", "DC");
+                document.getElementById("buttonEditInfo").classList.replace("Marvel", "DC");
+                document.getElementById("buttonDeleteInfoDialog").classList.replace("Marvel", "DC");
+                document.getElementById("dialogCard").classList.replace("Marvel", "DC");
+            }
+
+            let buttonRemove = document.getElementById("buttonDeleteInfoDialog");
+            buttonRemove.removeEventListener('click', buttonRemove.onclick);
+            buttonRemove.addEventListener('click', () => showAlert(idCard));
+
+            document.getElementById("infoNombre").innerHTML=data.nombre;
+            document.getElementById("infoNombrePJ").innerHTML=data.nombrePJ;
+            document.getElementById("infoAño").innerHTML=data.añoAparición;
+            document.getElementById("infoCasa").innerHTML=data.casa;
+            document.getElementById("infoEquipment").innerHTML=data.equipamiento;
+            document.getElementById("infoBio").innerHTML=data.biografía;
+
+            let img = document.getElementById("logoDialog");
+            console.log(document.getElementById("logoDialog").src.includes("DC"));
+            let srcImg = img.src;
+            console.log(srcImg + " == "+ data.casa);
+            if(img.src.includes("Marvel") && data.casa=="DC"){
+                img.src = "imgs/DC_Comics_logo.png";
+                img.classList.replace("logoMarvelDialog","logoDCDialog")
+            }else if(img.src.includes("DC") && data.casa=="Marvel"){
+                img.src = "imgs/Marvel2.png";
+                img.classList.replace("logoDCDialog","logoMarvelDialog")
+            }
+        }).then(data => {
+            document.getElementById("dialogInfo").showModal();
+        })
+
+
+        
+    }
+    function closeDialogInfo(){
+       
+        document.getElementById("infoNombre").innerHTML="";
+        document.getElementById("infoNombrePJ").innerHTML="";
+        document.getElementById("infoAño").innerHTML="";
+        document.getElementById("infoCasa").innerHTML="";
+        document.getElementById("infoEquipment").innerHTML="";
+        document.getElementById("infoBio").innerHTML="";
+
+        document.getElementById("dialogInfo").close();
+    }
+
+    function deleteCard(id){
+        console.log("elimina " + id);
+        document.getElementById(id).parentElement.remove();
+        document.getElementById("dialogAlert").close();
+        closeDialogInfo();
+    }
+
 </script>
