@@ -34,6 +34,28 @@ nav{
         0px 0px 10px rgb(39, 39, 39);
 }
 
+.buttonToolNav{
+    position: absolute;
+    right: 30px;
+    height: 45px;
+    width: 45px;
+    background-color: transparent;
+    border: 0px;
+    color: rgb(82, 82, 82);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+}
+.buttonToolNav:nth-child(1){
+    top: 50px;
+}
+.buttonToolNav:nth-child(2){
+    top: 120px;
+}
+.buttonToolNav:hover{
+    color: white;
+    box-shadow: 0px 0px 10px rgb(165, 165, 165), inset 0px 0px 10px rgb(153, 153, 153);
+}
 nav img#logoDC{
     filter: brightness(0.6) grayscale(1);
 }
@@ -218,6 +240,14 @@ main{
     position: absolute;
     left: 15%;
     top: 8%;
+    text-align: center;
+    overflow: hidden;
+}
+.card .imgContainer .switchImages{
+    transition: 1s;
+}
+.card .imgContainer img{
+    width: 90%;
 }
 .card.DC .imgContainer{
     border: 1px solid rgb(0, 123, 255);
@@ -429,6 +459,8 @@ main{
 }
 
 .dialogCard {
+    display: flex;
+    justify-content: center;
     width: 50%;
     max-width: 500px;
     /* min-width: 350px; */
@@ -477,9 +509,9 @@ main{
 }
 .dialogCard .titleCard{
     position: absolute;
-    width: 200px;
+    width: 80%;
     text-align: center;
-    left: calc(50% - 100px);
+    /* left: calc(50% - 100px); */
     margin: 0px;
     font-size: 30px;
 }
@@ -500,6 +532,10 @@ main{
     position: absolute;
     left: calc(50% - 125px);
     top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
 }
 .dialogCard.DC .imgContainer{
     border: 1px solid rgb(0, 123, 255);
@@ -515,7 +551,7 @@ main{
     bottom: 0px;
     width: 90%;
     left: 5%;
-    height: 50%;
+    height: 45%;
     margin-bottom: 5%;
     text-align: center;
 }
@@ -655,4 +691,370 @@ main{
     box-shadow: 0px 0px 5px 0px rgb(172, 32, 32),
     inset 0px 0px 10px 0px rgb(172, 32, 32);
     background: #00000030;
+}
+
+.notificationMessage{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 350px;
+    height: 120px;
+    border-radius: 10px;
+    filter: opacity(1);
+    transition: 1s;
+    padding: 15px;
+    padding-top: 30px;
+    text-wrap: wrap;
+    text-align: center;
+}
+.notificationMessage.Marvel{
+    border: 2px solid rgba(69, 0, 0, 0.329);
+    background: linear-gradient(45deg, rgb(49, 0, 0) 45%, rgb(90, 0, 0) 75%, rgb(49, 0, 0) 90%);
+    box-shadow: 0px 0px 5px 1px rgb(255, 87, 87);
+    color:rgb(230, 125, 125);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+.notificationMessage.DC{
+    border: 2px solid rgba(0, 36, 74, 0.321);
+    background: linear-gradient(45deg, rgb(5, 28, 53) 45%, rgb(5, 39, 75) 75%, rgb(5, 28, 53) 90%);
+    box-shadow: 0px 0px 5px 1px rgb(0 123 255);
+    color:rgb(88, 151, 219);
+    text-shadow: 0px 0px 10px rgb(9, 85, 138);
+}
+.notificationMessage.hide{
+    filter: opacity(0);
+}
+.notificationMessage.none{
+    display: none;
+}
+
+
+
+/*_________ page New Heros _________*/
+.conteinerMainNewCard{
+    display: block;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.507);
+    height: 100vh;
+    width: 100vw;
+    top:0px;
+}
+.conteinerMainNewCard.hide{
+    display: none;
+}
+.mainNewCard{
+    position: fixed;
+    width: 90vw;
+    left: 5vw;
+    height: 90vh;
+    top: 5vh;
+    margin: 0px;
+    background: linear-gradient(45deg, rgb(104, 104, 104) 45%, rgb(77, 77, 77) 75%, rgb(104, 104, 104) 90%);
+    border: 2px solid rgba(29, 29, 29, 0.321);
+    color: black;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(2, 1fr);
+    transition: 1s;
+}
+
+.mainNewCard.DC{
+    border-radius: 10px;
+    border: 2px solid rgba(0, 36, 74, 0.321);
+    background: linear-gradient(45deg, rgb(7, 37, 69) 45%, rgb(6, 51, 99) 75%, rgb(7, 37, 69) 90%);
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    box-shadow: 0px 0px 10px 5px rgb(0 123 255);
+}
+
+.mainNewCard.Marvel{
+    border-radius: 10px;
+    border: 2px solid rgba(69, 0, 0, 0.329);
+    background: linear-gradient(45deg, rgb(80, 0, 0) 45%, rgb(143, 0, 0) 75%, rgb(80, 0, 0) 90%);
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    box-shadow: 0px 0px 10px 5px rgb(255, 87, 87);
+}
+
+.mainNewCard.DC label{
+    color: rgb(116, 183, 255);
+    text-shadow: 0px 0px 2px rgb(0, 123, 255);
+}
+.mainNewCard.Marvel label{
+    color:rgb(230, 125, 125);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+.mainNewCard select,
+.mainNewCard option, .mainNewCard input, .mainNewCard textarea, .mainNewCard button{
+    color: black;
+}
+
+.mainNewCard .imgContainer{
+    /* width: 200px; */
+    height: 250px;
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+}
+.mainNewCard .imgContainer .image{
+    background: rgba(255, 255, 255, 0.151);
+    width: 200px;
+    height: 200px;
+}
+.mainNewCard .imgContainer .imgsSelected{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.514);
+    width: 45%;
+    height: 80%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.mainNewCard .imgContainer .imgsSelected button{
+    display: inline;
+    background: transparent;
+    border: 0px;
+    border-radius: 100%;
+}
+.mainNewCard .imgContainer .imgsSelected button:hover{
+    font-weight:bold;
+}
+.mainNewCard.DC .imgContainer .imgsSelected button{
+    background: rgb(26, 75, 128);
+    color: rgb(116, 183, 255);
+}
+.mainNewCard.Marvel .imgContainer .imgsSelected button{
+    background: rgb(104, 0, 0);
+    color: rgb(255, 131, 131);
+}
+.mainNewCard .imgContainer #newImage{
+    position: absolute;
+    bottom: 0px;
+    width: 100px;
+    right: calc(50% - 50px);
+}
+.mainNewCard .data1{
+    grid-column: 2;
+    grid-row: 1;
+}
+.mainNewCard .data1 div{
+    margin: 15px;
+    margin-bottom: 30px;
+}
+.mainNewCard .data1 #logoContainer{
+    margin: 0px;
+    height: 100px;
+    width: 200px;
+    text-align: center;
+}
+.mainNewCard .equipmentContainer{
+    grid-column: 1;
+    grid-row: 2;
+}
+.mainNewCard .bioContainer{
+    grid-column: 2;
+    grid-row: 2;
+}
+.mainNewCard.DC .equipmentContainer p,
+.mainNewCard.DC .bioContainer p{
+    color: rgb(116, 183, 255);
+    text-shadow: 0px 0px 2px rgb(0, 123, 255);
+}
+.mainNewCard.Marvel .equipmentContainer p,
+.mainNewCard.Marvel .bioContainer p{
+    color:rgb(230, 125, 125);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+.mainNewCard.DC input,
+.mainNewCard.DC select,
+.mainNewCard.DC textarea{
+    background: rgb(168, 210, 255);
+}
+.mainNewCard.Marvel input,
+.mainNewCard.Marvel select,
+.mainNewCard.Marvel textarea{
+    background: rgb(233, 153, 153);
+}
+
+.mainNewCard #saveHero{
+    position: absolute;
+    bottom: -15px;
+    width: 150px;
+    height: 25px;
+    left: calc(50% - 75px);
+    font-size: 18px;
+}
+.mainNewCard button{
+    display: none;
+}
+.mainNewCard.DC button{
+    display: block;
+    border: 0px;
+    background: rgb(0, 24, 49);
+    box-shadow: 0px 0px 5px 0px rgb(0, 123, 255), inset 0px 0px 5px 0px rgb(0, 123, 255);
+    color: rgb(116, 183, 255);
+    text-shadow: 0px 0px 2px rgb(0, 123, 255);
+}
+.mainNewCard.DC button:hover{
+    border: 0px;
+    background: rgb(26, 75, 128);
+    box-shadow: 0px 0px 5px 0px rgb(0, 123, 255), inset 0px 0px 5px 0px rgb(0, 123, 255);
+    color: rgb(116, 183, 255);
+    text-shadow: 0px 0px 2px rgb(0, 123, 255);
+}
+.mainNewCard.Marvel button{
+    display: block;
+    border: 0px;
+    background: rgb(32, 0, 0);
+    box-shadow: 
+        0px 0px 5px 0px rgb(255, 0, 0),
+        inset 0px 0px 5px 0px rgb(255, 0, 0);
+    ;
+    color: rgb(255, 131, 131);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+.mainNewCard.Marvel button:hover{
+    border: 0px;
+    background: rgb(104, 0, 0);
+    box-shadow: 
+        0px 0px 5px 0px rgb(255, 0, 0),
+        inset 0px 0px 5px 0px rgb(255, 0, 0);
+    ;
+    color: rgb(255, 131, 131);
+    text-shadow: 0px 0px 10px rgb(172, 32, 32);
+}
+
+.mainNewCard .closeMainNewCard{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    display: block;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 100%;
+    border: 0px;
+}
+.mainNewCard.DC .closeMainNewCard{
+    background:rgb(2, 39, 78);
+    box-shadow: 
+        inset 0px 0px 6px 1px rgb(0, 123, 255)
+    ;
+    color: rgb(116, 183, 255);
+}
+.mainNewCard.Marvel .closeMainNewCard{
+    background:rgb(32, 0, 0);
+    box-shadow: 
+        inset 0px 0px 6px 1px rgb(255, 0, 0)
+    ;
+    color: rgb(255, 131, 131);
+}
+
+
+.containerAddImage{
+    display: block;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.507);
+    height: 100vh;
+    width: 100vw;
+    top:0px;
+}
+.containerAddImage.hide{
+    display: none;
+}
+
+.mainAddImage{
+    position: fixed;
+    width: 80vw;
+    left: 10vw;
+    height: 80vh;
+    top: 10vh;
+    margin: 0px;
+    background: linear-gradient(45deg, rgb(104, 104, 104) 45%, rgb(77, 77, 77) 75%, rgb(104, 104, 104) 90%);
+    border: 2px solid rgba(29, 29, 29, 0.321);
+    color: black;
+    padding: 20px;
+    transition: 1s;
+}
+
+.mainAddImage.DC{
+    border-radius: 10px;
+    border: 2px solid rgba(0, 36, 74, 0.321);
+    background: linear-gradient(45deg, rgb(7, 37, 69) 45%, rgb(6, 51, 99) 75%, rgb(7, 37, 69) 90%);
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    box-shadow: 0px 0px 10px 5px rgb(0 123 255);
+}
+
+.mainAddImage.Marvel{
+    border-radius: 10px;
+    border: 2px solid rgba(69, 0, 0, 0.329);
+    background: linear-gradient(45deg, rgb(80, 0, 0) 45%, rgb(143, 0, 0) 75%, rgb(80, 0, 0) 90%);
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+    box-shadow: 0px 0px 10px 5px rgb(255, 87, 87);
+}
+
+.mainAddImage .closeMainNewCard{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    display: block;
+    font-weight: 900;
+    font-size: 20px;
+    border-radius: 100%;
+    border: 0px;
+    background: grey;
+}
+.mainAddImage.DC .closeMainNewCard{
+    background:rgb(2, 39, 78);
+    box-shadow: 
+        inset 0px 0px 6px 1px rgb(0, 123, 255)
+    ;
+    color: rgb(116, 183, 255);
+}
+.mainAddImage.Marvel .closeMainNewCard{
+    background:rgb(32, 0, 0);
+    box-shadow: 
+        inset 0px 0px 6px 1px rgb(255, 0, 0)
+    ;
+    color: rgb(255, 131, 131);
+}
+
+.mainAddImage .imgsContainer{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+}
+
+.mainAddImage .imgsContainer .butSelectImg{
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.315);
+    border-radius: 100%;
+    border-top: 4px solid rgba(255, 255, 255, 0.25);
+    border-left: 4px solid rgba(255, 255, 255, 0.25);
+    border-right: 4px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.5);
+}
+.mainAddImage.DC .imgsContainer .butSelectImg:hover{
+    box-shadow: 0px 0px 15px 1px rgb(0, 123, 255), 
+        inset 0px 0px 10px 1px rgb(0, 123, 255)
+    ;
+}
+.mainAddImage.Marvel .imgsContainer .butSelectImg:hover{
+    box-shadow: 0px 0px 15px 1px rgb(255, 0, 0),
+        inset 0px 0px 10px 1px rgb(255, 0, 0)
+    ;
 }
